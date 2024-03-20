@@ -1,13 +1,13 @@
 def plusOne(digits):
     lst = digits[:]
 
-    for i in range(1, len(lst)+1):
-        if lst[-i] != 9:
-            lst[-i] = lst[-i] + 1
+    for i in range(len(lst)-1, -1, -1):
+        if lst[i] != 9:
+            lst[i] = lst[i] + 1
             break
-        if lst[-i] == 9:
-            lst[-i] = 0
-            if i == len(lst):
+        if lst[i] == 9:
+            lst[i] = 0
+            if i == 0:
                 lst.insert(0, 1)
                 break
             continue
